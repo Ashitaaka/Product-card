@@ -1,0 +1,40 @@
+:root{
+    --green: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --DarkBlue: hsl(212, 21%, 14%);
+    --DarkGray: hsl(228, 12%, 48%);
+    --mainFont: 'Montserrat';
+    --secondFont: 'Fraunces';
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(--cream);
+    font-family: var(--mainFont);
+    min-height: 100vh;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    background-color: white;
+    margin: 1em auto;
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.8em;
+}
+.product_infos{
+    padding:2.5em;
+}
+.product_image{
+    text-align: center;  
+}
