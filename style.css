@@ -8,6 +8,7 @@
 }
 
 *{
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
@@ -15,17 +16,21 @@
 body{
     background-color: var(--cream);
     font-family: var(--mainFont);
+    color: var(--DarkGray);
     min-height: 100vh;
     font-size: 14px;
+    font-weight: 400;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .card{
+    overflow: hidden;
     background-color: white;
     margin: 1em auto;
-    max-width: 80%;
+    max-width: 50%;
+    min-width: 350px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -33,8 +38,99 @@ body{
     border-radius: 0.8em;
 }
 .product_infos{
-    padding:2.5em;
+    flex:1;
+    padding:2em;
 }
 .product_image{
-    text-align: center;  
+    flex:1;
+    text-align: center; 
+}
+ol{
+    display: flex;
+    list-style: none;
+    justify-content: flex-start;
+    align-items: center;
+}
+h1, .price{
+    font-family: var(--secondFont), serif;
+    font-weight: 700;
+}
+.product_type{
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    margin-bottom: 1em;
+}
+
+h1{
+    color: var(--DarkBlue);
+    font-size: 2.3em;
+    line-height: 1.1;
+    margin-bottom: 0.5em;
+}
+.promo_price{
+    color:var(--green);
+    font-size: 2.5em;
+}
+.product_description{
+    line-height: 1.6;
+    margin-bottom: 1.8em;
+}
+.original_price{
+    text-decoration: line-through;
+    font-family: var(--mainFont);
+    font-weight: 400;
+}
+.product_image img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+li{
+    margin-right: 0.3em;
+}
+.button{
+    width: 100%;
+    text-align: center;
+    background-color: var(--green);
+    padding: 1em;
+    border-radius: 0.5em;
+    margin-top: 1em;
+}
+.button a{
+    margin-left: 0.5em;
+    text-decoration: none;
+    color: white;
+}
+.button:hover{
+    background-color: hsl(157, 36%, 20%);;
+}
+.cart_ico{
+    margin-right: 0.7em;
+}
+
+/* MEDIA QUERIES */
+
+@media all and (min-width:800px){
+.card{
+    flex-direction: row;
+    max-width: 80%;    
+    }
+    .product_infos{
+     padding: 3em;
+    }
+    .product_image{
+        height: 100%;
+    }
+    .product_type{
+        margin-bottom: 2em;
+    }
+    h1{
+        font-size: 2.5em;
+        margin-bottom: 0.8em;
+    }
+    .button{
+        margin-top: 2em;
+    }
 }
